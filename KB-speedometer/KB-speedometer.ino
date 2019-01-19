@@ -78,10 +78,10 @@ void setup() {
   matrix.setTextSize(1);
   matrix.setTextColor(LED_ON);
 
-  for (int8_t x = 0; x >= -128; x--) {
+  for (int8_t x = 0; x >= -100; x--) {
     matrix.clear();
     matrix.setCursor(x, 0);
-    matrix.print("KidBright Speedometer");
+    matrix.print("KB Speedometer");
     matrix.writeDisplay();
     delay(100);
   }
@@ -165,7 +165,7 @@ void loop() {
     GotSecondSensor = false;
   } else {
     matrix.setCursor(0, 0);
-    matrix.print("  ");
+    matrix.print("00");
     matrix.writeDisplay();
     Serial.print("1st = ");
     Serial.print(first_sensor_distance);
